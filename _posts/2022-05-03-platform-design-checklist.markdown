@@ -17,6 +17,7 @@ categories: jekyll update
     1. What are the use cases of this API?
 1. Systems Design
     1. What is the end to end flow between the components?
+    1. Should this API have a sync flow or async flow? i.e. Maybe for large volume requests it will take too much time to process and it should be an async API instead, that just stars an async process.
 1. Database Design
     1. Is the DB design normalized or denormalized?
     1. If denormalized, will this design be able to maintain the denormalized database properly under all use cases, will it be able to remain consistent?
@@ -43,6 +44,9 @@ categories: jekyll update
     1. Does this solution require some capacity planning?
         1. Can this solution handle the projected load of upcoming years?
     1. What is the scaling model (serverless / horizontal scaling / vertical scaling)?
+    1. On the flow of the systems design, what is the limitation of the other components in the flow in terms of
+        1. What is the allowed execution time / latency budget for each component? (e.g. APIGW has 30 seconds hard limit)
+        1. What is the payload size limit of each component? (e.g. 6MB limit on Lambda sync invocation, 256KB limit on Lambda async invocation)
 1. Performance
     1. How the solution is meeting latency SLA in the technical requirements?
 1. Maintainability & Future Extensibility

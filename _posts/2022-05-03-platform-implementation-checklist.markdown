@@ -19,6 +19,7 @@ categories: jekyll update
     1. Are the logs utilizing structured logging, e.g. as JSON?
     1. When logging an exception, is the stack trace properly visible in the logs?
     1. Are the logs sufficient to troubleshoot an unexpected issue?
+    1. Are the logs including details about input parameters or only printing a generic message without any/sufficient parameter values?
 1. Performance
     1. Is there a suitable use case for caching, e.g. some downstream API responses?
 1. Unit Testing

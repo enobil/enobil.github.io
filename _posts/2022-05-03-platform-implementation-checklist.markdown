@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Platform Implementation Checklist"
+title:  "Platform API Implementation Checklist"
 date:   2022-05-03 10:39:07 +0300
 categories: jekyll update
 ---

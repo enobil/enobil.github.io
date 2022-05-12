@@ -17,6 +17,10 @@ categories: jekyll update
     1. What are the use cases of this API?
 1. Systems Design
     1. What is the end to end flow between the components?
+1. Database Design
+    1. Is the DB design normalized or denormalized?
+    1. If denormalized, will this design be able to maintain the denormalized database properly under all use cases, will it be able to remain consistent?
+    1. If denormalized, is it really needed? Because normalized db design is more maintainable.
 1. Data Model
     1. What are the key data models about this API?
 1. Reliability

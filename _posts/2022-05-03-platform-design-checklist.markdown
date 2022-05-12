@@ -17,7 +17,7 @@ categories: jekyll update
     1. What are the use cases of this API?
 1. Systems Design
     1. What is the end to end flow between the components?
-    1. Should this API have a sync flow or async flow? i.e. Maybe for large volume requests it will take too much time to process and it should be an async API instead, that just stars an async process.
+    1. Should this API have a sync flow or async flow? i.e. Maybe for large volume requests it will take too much time to process and it should be an async API instead, that just starts an async process.
 1. Database Design
     1. Is the DB design normalized or denormalized?
     1. If denormalized, will this design be able to maintain the denormalized database properly under all use cases, will it be able to remain consistent?

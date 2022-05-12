@@ -33,6 +33,7 @@ categories: jekyll update
     1. Can this design cause downtime on an external service?
 1. Scalability
     1. How much max potential throughput this API can achieve with this design?
+        1. If this is a redesign, how does it compare with the existing?
     1. What are the bottlenecks that are limiting the potential throughput?
     1. Does this solution require some capacity planning?
         1. Can this solution handle the projected load of upcoming years?

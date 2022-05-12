@@ -65,6 +65,9 @@ categories: jekyll update
         1. Ticketing system integration (e.g. JIRA REST API)
 1. Security
     1. What is the payload size limit for this API?
+    1. How the TPS limit will be applied for this API?
+        1. API level (basic, minimum requirement)?
+        1. Per-client (advanced)?
 1. Development Effort
     1. If long term outcome of multiple design options are equivalent, how they compare about the effort needed to implement?
 1. Backwards compatibility / Impact (if this is a change on an existing API)

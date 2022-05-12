@@ -32,14 +32,44 @@ categories: jekyll update
         1. Can schema/model changes cause downtime during the deployment?
     1. Can this design cause downtime on an external service?
 1. Scalability
+    1. How much max potential throughput this API can achieve with this design?
+    1. What are the bottlenecks that are limiting the potential throughput?
+    1. Does this solution require some capacity planning?
+        1. Can this solution handle the projected load of upcoming years?
+    1. What is the scaling model (serverless / horizontal scaling / vertical scaling)?
 1. Performance
-1. Maintainability
+    1. How the solution is meeting latency SLA in the technical requirements?
+1. Maintainability & Future Extensibility
+    1. How easy is it to handle new use cases, or adapt to modifications on existing use cases?
 1. Testability
+    1. How this solution will be unit tested?
+    1. How this solution will be ad-hoc end to end tested?
+    1. How this solution will be integration tested (automated)?
 1. Cost
+    1. What are the projections on infrastructure cost?
+    1. If this is a redesign, how this design's infra. cost compare with the previous one's?
 1. Monitoring
+    1. Performance metrics
+        1. How latency of the API will be monitored?
+    1. Reliability metrics
+        1. How error count and error rate of the API will be monitored? (Internal server errors)
+    1. Usage metrics
+        1. How the quota utilizations of this API will be monitored?
+            1. Utilization of downstream services, i.e. utilized TPS percent out of the TPS limit
+    1. Custom metrics
+        1. What should be the KPIs (key performance indicators) for this API, also considering the business impact?
 1. Alarms
+    1. Are alarms planned to be created for each monitored key metric?
+    1. How the team will get notified by the alarms and resolve?
+        1. Email notifications
+        1. Ticketing system integration (e.g. JIRA REST API)
 1. Security
+    1. What is the payload size limit for this API?
 1. Development Effort
-1. Future Extensibility
+    1. If long term outcome of multiple design options are equivalent, how they compare about the effort needed to implement?
+1. Backwards compatibility / Impact (if this is a change on an existing API)
+    1. How this design makes sure none of the existing clients will break?
+1. Change management
+    1. What would be the procedure to roll back this change?
 
 Please also check [Platform Implementation Checklist]({% post_url 2022-05-03-platform-implementation-checklist %}).

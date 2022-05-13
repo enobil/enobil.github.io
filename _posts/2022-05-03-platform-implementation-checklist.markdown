@@ -25,13 +25,17 @@ categories: jekyll update
     1. Is the log message understandable for a person with limited context?
 1. Performance
     1. Is there a suitable use case for caching, e.g. some downstream API responses?
+1. Unit Testability
+    1. Are there any concrete class that makes an untestable static call or system call (e.g. System.now() / new Date())?
+    1. Are all dependencies of the class injected through dependency injection?
 1. Unit Tests
     1. Is there full branch coverage?
     1. (~Devops) Is the code review tool integrated with coverage results, so that code review can make e.g. missed branches clearly visible?
     1. During the verification of function calls, besides the count, are the parameters also verified?
-1. Testability
-    1. Are there any concrete class that makes an untestable static call or system call (e.g. System.now() / new Date())?
-    1. Are all dependencies of the class injected through dependency injection?
+1. Ad hoc e2e tests
+    1. Is the change tested end to end, at least manually?
+1. Integration tests
+    1. Is the change covered with integration tests?
 1. Configuration
     1. If environment variables are being used, is there any mismatch between where they're configured in the configs and used in the code?
         1. Any type mismatches e.g. forgetting to parse as number in the code?

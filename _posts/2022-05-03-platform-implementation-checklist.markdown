@@ -13,6 +13,8 @@ categories: jekyll update
     1. (javascript) Is there any if condition that requires more strict check e.g. === instead of ==, or if (x !== undefined) instead of just if (x)?
     1. (javascript) Is there any async method call lacking await?
     1. (javascript) Is there any mixed use of async/await and then/catch?
+1. Error handling
+    1. Are there sufficient input validations?
 1. Logging
     1. Is there a proper logging framework in use?
     1. Are the logs using the proper log levels?

@@ -85,5 +85,7 @@ categories: jekyll update
     1. How this design makes sure none of the existing clients will break?
 1. Change management
     1. What would be the procedure to roll back this change?
+1. DevOps
+    1. How the integration tests will be included in the CI/CD pipelines?
 
 Please also check [Platform Implementation Checklist]({% post_url 2022-05-03-platform-implementation-checklist %}).

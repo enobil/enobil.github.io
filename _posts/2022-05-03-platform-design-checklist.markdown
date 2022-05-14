@@ -10,7 +10,7 @@ categories: jekyll update
 1. Technical Requirements  
     1. How many requests are expected per second for this API?  
     1. What should be the TPS limit of this API?  
-        1. What is the potential max throughput of this API's downstream dependencies?
+        1. What is the potential max throughput of this API's downstream dependencies? (Since TPS limit of this API has to be lower than that.)
     1. What should be the availability SLA of this API?
     1. What should be the latency SLA of this API?
 1. Use Cases

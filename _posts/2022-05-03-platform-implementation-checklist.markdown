@@ -32,6 +32,7 @@ categories: jekyll update
     1. Are all dependencies of the class injected through dependency injection?
 1. Unit Tests
     1. Is there full branch coverage?
+    1. Each test must target only one concrete class as the subject and mock its dependencies. Are there cases where one test tries to test multiple classes at once? If so the concrete implementation must be refactored to have separate classes for different levels of responsibilities.
     1. (~Devops) Is the code review tool integrated with coverage results, so that code review can make e.g. missed branches clearly visible?
     1. During the verification of function calls, besides the count, are the parameters also verified?
 1. Ad hoc e2e tests

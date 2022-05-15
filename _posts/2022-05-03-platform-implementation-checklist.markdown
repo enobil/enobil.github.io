@@ -54,5 +54,9 @@ categories: jekyll update
     1. Is there any deprecated version of a dependency trying to be added in a new change?
 1. Maintainability & Extensibility
     1. Can it be made more generic for future reuse?
+1. Configuration
+    1. Lambda
+        1. Is it using a proper timeout value?
+	1. Is it using a proper memory size?
 
 Please also check [Platform Design Checklist]({% post_url 2022-05-03-platform-design-checklist %}).

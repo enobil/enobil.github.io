@@ -47,6 +47,7 @@ categories: jekyll update
     1. Is there a linter configured to automate code style checks?
     1. Is the indentation consistent?
     1. Are the constant values extracted to a defined constant, instead of used directly as a magic number/literal?
+    1. Instead of nested ifs, prefer at most one level of nested ifs and return quickly.
 1. Dependency management
     1. Is there any deprecated version of a dependency trying to be added in a new change?
 1. Maintainability & Extensibility

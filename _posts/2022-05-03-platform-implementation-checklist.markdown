@@ -13,17 +13,20 @@ categories: jekyll update
     1. (javascript) Is there any if condition that requires more strict check e.g. === instead of ==, or if (x !== undefined) instead of just if (x)?
     1. (javascript) Is there any async method call lacking await?
     1. (javascript) Is there any mixed use of async/await and then/catch?
-1. Error handling
-    1. Are there sufficient input validations?
+1. Reliability - Input validations
+    1. Are there any input validations?
+    1. Is there a validation on request payload size?
+1. Reliability - Error handling
     1. (lambda) If there is an internal server error, is lambda exit status properly unsuccessful, or is it exiting with successful code by mistake?
-    1. Retries
-        1. Custom exceptions should have information whether they're retriable or not.
-        1. (SQS) When handling an SQS message batch, successfully processed messages must be deleted. Messages with a retriable error shouldn't be deleted. Messages with a non-retriable error should be deleted and moved to a dead-letter queue.
-    1. Rollback
-        1. As part of error handling, is it missing any required roll back operations?
-            1. (aws state machine & lambda) It is good to perform this rollbacks within the lambda in form of try catch but that's not always sufficient. Lambda can also get terminated due to timeout, out of memory, or another crash. In those cases, state machine error handling should perform the necessary rollbacks.
+1. Reliability - Retries
+    1. Is it missing any required retry operations in case the request handling fails?
+    1. If there are custom exception definitions, are they indicative of retriable vs non-retriable?
+    1. (SQS) When handling an SQS message batch, successfully processed messages must be deleted. Messages with a retriable error shouldn't be deleted. Messages with a non-retriable error should be deleted and moved to a dead-letter queue.
+1. Reliability - Rollback
+    1. Is it missing any required rollback operations in case the request handling fails?
+    1. (aws state machine & lambda) It is good to perform this rollbacks within the lambda in form of try catch but that's not always sufficient. Lambda can also get terminated due to timeout, out of memory, or another crash. In those cases, state machine error handling should perform the necessary rollbacks.
 1. Logging
-    1. Is there a proper logging framework in use?
+    1. Is there any established logging framework in use?
     1. Are the logs using the proper log levels?
     1. Are the logs utilizing structured logging, e.g. as JSON?
     1. When logging an exception, is the stack trace properly visible in the logs?

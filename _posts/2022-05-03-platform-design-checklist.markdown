@@ -24,6 +24,7 @@ categories: jekyll update
     1. If denormalized, is it really needed? Because normalized db design is more maintainable.
 1. Data Model
     1. What are the key data models about this API?
+    1. Is the response size small enough for the consumer or could it cause network/cpu/memory bottlenecks on the consumer due to large amounts of data?
 1. Reliability
     1. Are there any edge cases that this solution will not work?
     1. Is there any possibility of data inconsistency?

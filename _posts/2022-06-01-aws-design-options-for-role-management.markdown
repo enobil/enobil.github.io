@@ -28,7 +28,7 @@ AWS console / AWS SDK / AWS CLI
 or  
 Application frontend -> application backend -> AWS SDK  
 
-## Option 1.1: Using AWS Cognito Groups
+## Option 1.1: Using AWS Cognito Groups (Proposed)
 
 https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-user-groups.html  
 

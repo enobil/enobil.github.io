@@ -18,6 +18,7 @@ In this type of options, the role data will be maintained within Cognito.
 1. Allows stricter access control on the user role data (compared to application database) (more secure)
 1. User role data stays in the Cognito / dedicated user management services (privacy)
 1. Management functionalities are offloaded to Cognito (separation of concerns, maintainability)
+1. Regulation / security review friendly, since otherwise application layer can have gaps to expose vulnerabilities
 
 ## Cons
 

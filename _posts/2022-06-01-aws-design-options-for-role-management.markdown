@@ -39,6 +39,7 @@ In terms of implementation, the group info is included in the JWT token as in [h
 
 1. Allows group level operations  
     1. Allows attaching IAM policies to group level
+1. (Looks like more idiomatic usage of Cognito about the user roles (to check further))
 
 # Cons
 

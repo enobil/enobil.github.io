@@ -10,7 +10,7 @@ categories: jekyll update
 There are several design options to manage application level user roles in a platform running on AWS.  
 Aiming to outline each option and compare.  
 
-## Option 1: Maintaining Roles In AWS Cognito
+## Option 1.x: Maintaining Roles In AWS Cognito
 
 In this type of options, the role data will be maintained within Cognito. 
 

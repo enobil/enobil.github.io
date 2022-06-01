@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "AWS Systems Design Options For User Role Management"
-date:   2022-01-06 14:00:00 +0300
+date:   2022-06-01 14:00:00 +0300
 categories: jekyll update
 ---
 

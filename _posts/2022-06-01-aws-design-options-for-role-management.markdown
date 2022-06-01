@@ -45,7 +45,7 @@ In terms of implementation, the group info is included in the JWT token as in [h
 
 # Related Quotas
 1. Max number of group memberships per user: 100 (assuming <10 roles, highly sufficient)
-1. Max number of groups per user pool: 10K (assuming <10 roles, highly sufficient)
+1. Max number of groups per user pool: 10K (sufficient for [Group based multi-tenancy](https://docs.aws.amazon.com/cognito/latest/developerguide/group-based-multi-tenancy.html) assuming e.g. <1K tenants * <10 roles/tenant) (assuming <10 roles, there will be <10 groups needed for other types of [Multi tenancy design options](https://docs.aws.amazon.com/cognito/latest/developerguide/multi-tenant-application-best-practices.html))  
 1. SDK
     1. AdminAddUserToGroup -> 25 TPS (max 1500 requests/minute, 90K req/hour)
     1. AdminRemoveUserFromGroup -> 25 TPS (max 1500 requests/minute, 90K req/hour)

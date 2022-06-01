@@ -5,7 +5,7 @@ date:   2022-06-01 14:00:00 +0300
 categories: jekyll update
 ---
 
-### Introduction
+## Introduction
 
 There are several design options to manage application level user roles in a platform running on AWS.  
 Aiming to outline each option and compare.  

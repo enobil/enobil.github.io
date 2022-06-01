@@ -12,8 +12,7 @@ Aiming to outline each option and compare.
 
 ## Option 1: Maintaining Roles In AWS Cognito
 
-In this type of options, the role data will be maintained within Cognito.  
-In terms of implementation, the group info is included in the JWT token as in [here](https://stackoverflow.com/a/43789307).
+In this type of options, the role data will be maintained within Cognito. 
 
 # Pros
 1. Allows stricter access control on the user role data (compared to application database) (more secure)
@@ -34,6 +33,7 @@ Application frontend -> application backend -> AWS SDK
 https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-user-groups.html  
 
 The idea is maintaining one user group for each role.  
+In terms of implementation, the group info is included in the JWT token as in [here](https://stackoverflow.com/a/43789307).  
 
 # Pros
 

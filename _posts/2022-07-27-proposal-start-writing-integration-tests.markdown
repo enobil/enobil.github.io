@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Proposal: Start Writing Integration Tests"
+title:  "Proposal To Start Writing Integration Tests"
 date:   2022-07-27 11:00:00 +0300
 categories: jekyll update
 ---
 
-# Proposal
+## Proposal
 
 I'm proposing to start writing integration tests.
 
@@ -15,7 +15,7 @@ Unit tests also provide a fundamental level of testing, but it still has blind s
 
 There are numerous high impact reasons to write integration tests as part of the software development workflow.
 
-## Prevents Implementation Issues At The Time Of Development
+# Prevents Implementation Issues At The Time Of Development
 
 An implementation issue could be a bug, a configuration problem, or any other part of the implementation that ends up with failure of the service API use cases.
 
@@ -31,7 +31,7 @@ When integration tests are written together with code changes at the time of dev
 * This allows all involved stakeholders to use their time on meaningful work and have impact, instead of wasting time on problems that could be avoided during the development (opportunity cost of the other stakeholders' wasted potential).
 * This prevents shipping a change that doesn't work.
 
-## Prevents Implementation Issues After The Time Of Development
+# Prevents Implementation Issues After The Time Of Development
 
 Once an implementation change is merged to codebase and deployed to all environments, it can still get broken by the future changes on the same codebase.
 
@@ -42,7 +42,7 @@ Integration tests on the other hand, have zero cost to re-run. Usually integrati
 * This prevents any breaking change to be introduced.
 * Allows building blocks on top of each other in a solid & reliable manner, rather than as jenga blocks.
 
-## Unblocks Achieving CI/CD (Continuous Integration / Continuous Delivery)
+# Unblocks Achieving CI/CD (Continuous Integration / Continuous Delivery)
 
 CI/CD pipelines automate deployment of the changes instead of requiring devs and other stakeholders to manually deploy changes to each environment. This saves time of developers, as well as makes the changes ready in the environments as soon as possible, to uncover issues as soon as possible, minimizing the time loss until issues are observed.
 
@@ -59,3 +59,27 @@ Automated CI/CD pipelines can be easily achieved once the service API has suffic
 * This allows devs to quickly become unblocked when they are blocked by deployment of some other change by another dev.
 * This allows issues to be discovered as quick as possible in the environments by making the change available as soon as possible as long as it is safe.
 * This allows devs to focus their time, effort and attention on productive work instead of manually triggering and tracking deployments, moving changes between environments for each change for each environment.
+
+# Integration Tests Are Simple
+
+When writing unit tests, a developer needs to consider what dependencies a class and function has. For each of those dependency classes, functions, refereneces, a developer needs to find how to mock them. Sometimes it will need mocking a function with a stub (mock function implementation) that is stateful. Sometimes it will require using a 'spy' construct to perform further verifications. All of these constructs are beneficial for the purpose of unit testing but also adds significant complexity when simply maintaining a codebase.
+
+When writing integration tests, a develoepr needs to consider the request payload, the expected response payload, and how to clean up side effects after the test execution. This is often simpler than writing unit tests since there is no need for a full understanding of interdependencies inside the codebase. It only needs a high level understanding of the systems design of the service API under test.
+
+Integration tests are simple yet extremely effective at end to end testing functionality of a service API.
+
+* This allows teams to easily start writing integration tests.
+* This allows teams to easily add more integration test coverage, easily maintain their codebase, without requiring deep analysis of the implementation code for each test.
+* The simplicity of the integration tests allows teams to focus on making the most effective real world use of the tests, simply and directly, instead of spending effort on e.g. how to write a complex unit test requiring e.g. 5 different unit test specific abstractions (mocks,stubs,spies,static reference workarounds,...), which at the end of the day can fail to detect significant issues.
+
+# Next Steps
+
+1. Start with a POC integration test, with below minimal logic for example (any test framework can be used e.g. JUnit, TestNG, jest):
+  1. Make a service call to create a test entity
+  1. Make another service call to retrieve the entity back from the service API
+  1. Make one last service call to clean up the test entity from the service API
+1. Expand to more use cases, leveraging the test framework
+1. Devops improvements
+  1. Integrate with CI/CD pipeline
+  1. Enable notifications to the team when the pipeline integ test run fails
+  1. Optionally enable automatic promotions in CI/CD pipeline up to some environment based on integ test pass status

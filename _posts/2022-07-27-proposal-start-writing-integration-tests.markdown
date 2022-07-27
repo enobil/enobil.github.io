@@ -7,7 +7,7 @@ categories: jekyll update
 
 ## Proposal
 
-I'm proposing to start writing integration tests.
+I'm proposing to start writing integration tests if the project doesn't have already.
 
 Integration tests ensure the implementation is actually working reliably and correctly in various scenarios, end-to-end.
 

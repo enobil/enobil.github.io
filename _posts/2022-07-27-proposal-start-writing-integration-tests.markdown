@@ -60,7 +60,7 @@ Automated CI/CD pipelines can be easily achieved once the service API has suffic
 * This allows issues to be discovered as quick as possible in the environments by making the change available as soon as possible as long as it is safe.
 * This allows devs to focus their time, effort and attention on productive work instead of manually triggering and tracking deployments, moving changes between environments for each change for each environment.
 
-# Integration Tests Are Simple
+# Integration Tests Are Simple Yet Extremely Effective
 
 When writing unit tests, a developer needs to consider what dependencies a class and function has. For each of those dependency classes, functions, refereneces, a developer needs to find how to mock them. Sometimes it will need mocking a function with a stub (mock function implementation) that is stateful. Sometimes it will require using a 'spy' construct to perform further verifications. All of these constructs are beneficial for the purpose of unit testing but also adds significant complexity when simply maintaining a codebase.
 

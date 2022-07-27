@@ -75,11 +75,11 @@ Integration tests are simple yet extremely effective at end-to-end testing funct
 # Next Steps
 
 1. Start with a POC integration test, with below minimal logic for example (any test framework can be used e.g. JUnit, TestNG, jest):
-  1. Make a service call to create a test entity
-  1. Make another service call to retrieve the entity back from the service API
-  1. Make one last service call to clean up the test entity from the service API
+    1. Make a service call to create a test entity
+    1. Make another service call to retrieve the entity back from the service API
+    1. Make one last service call to clean up the test entity from the service API
 1. Expand to more use cases, leveraging the test framework
 1. Devops improvements
-  1. Integrate with CI/CD pipeline
-  1. Enable notifications to the team when the pipeline integ test run fails
-  1. Optionally enable automatic promotions in CI/CD pipeline up to some environment based on integ test pass status
+    1. Integrate with CI/CD pipeline
+    1. Enable notifications to the team when the pipeline integ test run fails
+    1. Optionally enable automatic promotions in CI/CD pipeline up to some environment based on integ test pass status

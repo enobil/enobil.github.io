@@ -64,7 +64,7 @@ Automated CI/CD pipelines can be easily achieved once the service API has suffic
 
 When writing unit tests, a developer needs to consider what dependencies a class and function has. For each of those dependency classes, functions, refereneces, a developer needs to find how to mock them. Sometimes it will need mocking a function with a stub (mock function implementation) that is stateful. Sometimes it will require using a 'spy' construct to perform further verifications. All of these constructs are beneficial for the purpose of unit testing but also adds significant complexity when simply maintaining a codebase.
 
-When writing integration tests, a develoepr needs to consider the request payload, the expected response payload, and how to clean up side effects after the test execution. This is often simpler than writing unit tests since there is no need for a full understanding of interdependencies inside the codebase. It only needs a high level understanding of the systems design of the service API under test.
+When writing integration tests, a develoepr needs to only consider the request payload, the expected response payload, and how to clean up side effects after the test execution. This is often simpler than writing unit tests since there is no need for a full understanding of interdependencies inside the codebase. It only needs a high level understanding of the systems design of the service API under test.
 
 Integration tests are simple yet extremely effective at end to end testing functionality of a service API.
 

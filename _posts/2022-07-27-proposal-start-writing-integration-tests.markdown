@@ -11,7 +11,7 @@ I'm proposing to start writing integration tests if the project doesn't have alr
 
 Integration tests ensure the implementation is actually working reliably and correctly in various scenarios, end-to-end.
 
-Unit tests also provide a fundamental level of testing, but it still has blind spots for majority of correctness and reliability problems. In other words, the end to end functionality may not work at all even if there is a high unit test coverage and all unit tests passing. Because the actual end to end functionality involves much more potential points of failure that unit tests will never be able to cover by design. Therefore, integration tests are cruical to make sure a service API is actually working correctly in various scenarios. Unit tests have their place and benefits too, unit tests should be still written for other reasons, but the actual guarantee about "whether if a service is working or not" can only be provided by integration tests.
+Unit tests also provide a fundamental level of testing, but it still has blind spots for majority of correctness and reliability problems. In other words, the end-to-end functionality may not work at all even if there is a high unit test coverage and all unit tests passing. Because the actual end-to-end functionality involves much more potential points of failure that unit tests will never be able to cover by design. Therefore, integration tests are cruical to make sure a service API is actually working correctly in various scenarios. Unit tests have their place and benefits too, unit tests should be still written for other reasons, but the actual guarantee about "whether if a service is working or not" can only be provided by integration tests.
 
 There are numerous high impact reasons to write integration tests as part of the software development workflow.
 
@@ -66,7 +66,7 @@ When writing unit tests, a developer needs to consider what dependencies a class
 
 When writing integration tests, a develoepr needs to only consider the request payload, the expected response payload, and how to clean up side effects after the test execution. This is often simpler than writing unit tests since there is no need for a full understanding of interdependencies inside the codebase. It only needs a high level understanding of the systems design of the service API under test.
 
-Integration tests are simple yet extremely effective at end to end testing functionality of a service API.
+Integration tests are simple yet extremely effective at end-to-end testing functionality of a service API.
 
 * This allows teams to easily start writing integration tests.
 * This allows teams to easily add more integration test coverage, easily maintain their codebase, without requiring deep analysis of the implementation code for each test.

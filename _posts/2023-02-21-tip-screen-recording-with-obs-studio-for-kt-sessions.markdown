@@ -7,7 +7,7 @@ categories: jekyll update
 
 # Installation
 
-Download & install OBS Studio from https://obsproject.com/download
+Download & install OBS Studio from [https://obsproject.com/download](https://obsproject.com/download)
 
 # Auto-Configuration Wizard
 
